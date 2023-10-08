@@ -33,7 +33,7 @@ window.onload = function () {
 
 
                 // 创建一个新的figure元素
-                var figure = $('<figure>').addClass('w-5 scale-50 shrink-0 rounded-lg bg-gray-800 p-8 text-white sm:p-10 gl-source');
+                var figure = $('<figure>').addClass('shrink-0 rounded-lg bg-gray-800 text-white gl-source');
 
                 // 创建包含图片和相关元素的div
                 var innerDiv = $('<div>').addClass('items-center text-center');
@@ -49,7 +49,7 @@ window.onload = function () {
                 var textDiv = $('<div>').addClass('text-white font-bold text-xl');
                 var heading = $('<h3>').text(ti);
                 textDiv.append(heading);
-                var bottomDiv = $('<div>').addClass('bottom');
+                var bottomDiv = $('<div>').addClass('bottom c-pb-16px');
                 var progressContainer = $('<div>').addClass('progress-container');
                 var infoText = $('<div>').addClass('text-gray-300 text-sm').text(au);
                 var barDiv = $('<div>').addClass('bar');
