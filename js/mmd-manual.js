@@ -38,20 +38,22 @@ window.onload = function () {
                 // 创建包含图片和相关元素的div
                 var innerDiv = $('<div>').addClass('items-center text-center');
                 var topDiv = $('<div>').addClass('top-0');
-                var maxDiv = $('<div>').addClass('max-w-sm');
-                var image = $('<img>').addClass('rounded-lg').attr('src', c);
-                maxDiv.append(image);
+                var maxDiv = $('<div>').addClass('');
+                var imageAttr = $('<a>').addClass('').attr('href',l);
+                var image = $('<img>').addClass('rounded-lg lg:h-72 h-64').attr('src', c);
+                imageAttr.append(image);
+                maxDiv.append(imageAttr);
                 topDiv.append(maxDiv);
                 innerDiv.append(topDiv);
 
                 // 添加文本和进度条元素
                 var h4 = $('<div>').addClass('h-4');
-                var textDiv = $('<div>').addClass('text-white font-bold text-xl');
-                var heading = $('<h3>').text(ti);
+                var textDiv = $('<div>').addClass('text-white font-bold text-xl max-w-[256px] lg:max-w-[288px] truncate');
+                var heading = $('<a>').text(ti).attr('href',l);
                 textDiv.append(heading);
                 var bottomDiv = $('<div>').addClass('bottom c-pb-16px');
                 var progressContainer = $('<div>').addClass('progress-container');
-                var infoText = $('<div>').addClass('text-gray-300 text-sm').text(au);
+                var infoText = $('<div>').addClass('text-gray-300 text-xs max-w-[256px] lg:max-w-[288px] truncate').text(au);
                 var barDiv = $('<div>').addClass('bar');
                 var progressBar = $('<div>').addClass('progress').css('width', '60%');
                 barDiv.append(progressBar);
