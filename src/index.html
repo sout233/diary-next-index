@@ -19,18 +19,51 @@
 
     <nav
         class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between bg-black bg-opacity-50 backdrop-filter backdrop-blur-lg p-4 border-b-1 border-gray-900">
-        <!-- 左侧内容 -->
         <div>
             <a href="#" class="text-white font-bold text-xl px-8">Logo</a>
         </div>
 
-        <!-- 右侧内容 -->
-        <div class="flex items-center space-x-10 px-8">
+        <div id="menu" class="flex items-center space-x-10 px-8">
             <a href="#" class="text-gray-200 hover:text-gray-300 font-semibold">Home</a>
             <a href="#" class="text-gray-200 hover:text-gray-300 font-semibold">About</a>
             <a href="#" class="text-gray-200 hover:text-gray-300 font-semibold">Contact</a>
         </div>
+
+        <button id="menuButton" class="text-gray-200 hover:text-gray-300 focus:outline-none hidden">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 12h18M3 6h18M3 18h18"></path>
+            </svg>
+        </button>
     </nav>
+
+    <script>
+        var menuButton = document.getElementById('menuButton');
+        var menu = document.getElementById('menu');
+
+        menuButton.addEventListener('click', function () {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+    <style>
+        @media (max-width: 640px) {
+            #menu {
+                display: none;
+            }
+
+
+            #menu.hidden {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        @media (max-width: 640px) {
+            #menuButton {
+                display:block;
+            }
+        }
+    </style>
 
     <div class="h-20 md:h-20 sm:h-40 lg:h-10 mh-30"></div>
     <section
@@ -108,15 +141,38 @@
         <div class="lg:mx-auto lg:max-w-2xl">
             <div class="h-8 lg:h-1"></div>
             <h2 class="font-display font-extrabold  pb-2  text-center">
-                <span class="text-purple-300 text-6xl xl:text-7xl">已发行曲目</span>
+                <span class="text-gray-300 text-6xl xl:text-7xl">已发行曲目</span>
             </h2>
             <div class="h-3"></div>
             <h2 class="font-display font-extrabold  pb-2  text-center">
-                <span class="text-purple-100">RELEASED</span>
+                <span class="text-gray-100">RELEASED</span>
             </h2>
         </div>
+        <div class="lg:h-0 h-3"></div>
+
         <!-- 又臭又长的列表 -->
         <div class="max-w-max flex gap-6 overflow-x-scroll pb-4 glry">
+            <figure class="shrink-0 rounded-lg bg-gray-800 text-white gl-source">
+                <div class="items-center text-center">
+                    <div class="top-0">
+                        <div><a href="https://music.163.com/song?id=2053170145"><img class="rounded-lg lg:h-72 h-64"
+                                    src="http://p1.music.126.net/SvCdsKoSmLjl2RX1LvvGYQ==/109951168659688178.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="h-4"></div>
+                    <div class="text-white font-bold text-xl max-w-[256px] lg:max-w-[288px] truncate"><a
+                            href="https://music.163.com/song?id=2053170145">Побед</a></div>
+                    <div class="bottom c-pb-16px">
+                        <div class="progress-container">
+                            <div class="text-gray-300 text-xs max-w-[256px] lg:max-w-[288px] truncate">ТЕЕМСИКЛ / Bayer
+                                Seth / Diary Music</div>
+                            <div class="bar">
+                                <div class="progress" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </figure>
         </div>
 
         </div>
@@ -145,7 +201,7 @@
                 AsTroy / Diary Music / Hilarity Leap Records
             </h3>
             <div class="h-4"></div>
-            <p class="text-base max-w-2xl text-gray-300 text-center lg:text-left">
+            <p class="text-base text-gray-300 text-center lg:text-left">
                 “梦中那张散发怀旧气息的相片，猛然间散发出闪亮的光芒，它们悬浮在空气中，飘散在粒子间，让昏暗的空间犹如爆炸一般地变得明亮。”</p>
             <div class="h-8"></div>
             <div class="xl: flex flex-col gap-4 xl:flex-row">
@@ -162,15 +218,15 @@
 
         <div class="lg:mx-auto lg:max-w-2xl">
             <div class="h-8 lg:h-1"></div>
-            <h2 class="font-display font-extrabold  pb-2  text-center">
-                <span class="text-purple-300 text-6xl xl:text-7xl">宣发能力</span>
+            <h2 class="font-display font-extrabold  pb-2  text-center lg:text-left">
+                <span class="text-blue-300 text-6xl xl:text-7xl">宣发能力</span>
             </h2>
             <div class="h-3"></div>
-            <h2 class="font-display font-extrabold  pb-2  text-center">
-                <span class="text-purple-100">PROPAGANDA</span>
+            <h2 class="font-display font-extrabold  pb-2  text-center lg:text-left">
+                <span class="text-blue-100">PROPAGANDA</span>
             </h2>
-            <p class="text-base max-w-2xl text-gray-300 text-center lg:text-left">
-                我们由尘音文化担任发行工作，我们可上架全球150+音乐平台，国内流媒体平台发行速度最快可达8小时上下；
+            <p class="text-base text-gray-300 text-center lg:text-left">
+                我们由尘音文化担任发行工作，我们可上架全球150+音乐平台，国内流媒体平台发行速度最快可达8小时上下；<br><br>
                 我们也正同时竭尽努力完善我们的宣发工作，截止目前，我们已有多个作品登上网易云官方国电周榜，并同时也有多个作品登上网易云平台其他达人所创建的歌单中，也同时有作品登上QQ音乐官方电音榜歌单，厂牌也同时会为制作人的作品提供QQ音乐Banner宣传服务。
             </p>
             <div class="h-8"></div>
@@ -187,14 +243,14 @@
 
         <div class="lg:mx-auto lg:max-w-2xl">
             <div class="h-8 lg:h-1"></div>
-            <h2 class="font-display font-extrabold  pb-2  text-center">
-                <span class="text-purple-300 text-6xl xl:text-7xl">视觉设计</span>
+            <h2 class="font-display font-extrabold  pb-2  text-center lg:text-left">
+                <span class="text-pink-300 text-6xl xl:text-7xl">视觉设计</span>
             </h2>
             <div class="h-3"></div>
-            <h2 class="font-display font-extrabold  pb-2  text-center">
-                <span class="text-purple-100">VISUAL DESIGN</span>
+            <h2 class="font-display font-extrabold  pb-2  text-center lg:text-left">
+                <span class="text-pink-100">VISUAL DESIGN</span>
             </h2>
-            <p class="text-base max-w-2xl text-gray-300 text-center lg:text-left">
+            <p class="text-base text-gray-300 text-center lg:text-left">
                 *我们建立了自己的图库<br><br>
 
                 在2023年8月11日后，我们放弃使用Unsplash等无版权图网站的图片，取而代之的是采用Diary
@@ -215,21 +271,17 @@
 
         <div class="lg:mx-auto lg:max-w-2xl">
             <div class="h-8 lg:h-1"></div>
-            <h2 class="font-display font-extrabold  pb-2  text-center">
-                <span class="text-purple-300 text-6xl xl:text-7xl">我们的成就</span>
+            <h2 class="font-display font-extrabold  pb-2  text-center lg:text-left">
+                <span class="text-red-300 text-6xl xl:text-7xl">我们的成就</span>
             </h2>
             <div class="h-3"></div>
-            <h2 class="font-display font-extrabold  pb-2  text-center">
-                <span class="text-purple-100">ACHIEVEMENTS</span>
+            <h2 class="font-display font-extrabold  pb-2  text-center lg:text-left">
+                <span class="text-red-100">ACHIEVEMENTS</span>
             </h2>
             <p class="text-base max-w-2xl text-gray-300 text-center lg:text-left">
-            <div class="col-md-6 sh" data-move-y="500px"
-                style="opacity: 1; transition: all 1s ease 0s, opacity 1.5s ease 0s;">
-                <h4 class="spanborder text-spacing">
-                    <span class="text-black">注意事项&nbsp;</span>
-                    <small class="text-muted">NOTICES</small>
-                </h4>
-                <ul class="text-gray-300">
+            <div class="h-4"></div>
+            <div class="col-md-6 sh">
+                <ul class="text-gray-300 text-center lg:text-left">
                     <li>
                         <strong>
                             《210》登陆QQ音乐第13周喜力电音榜
@@ -250,13 +302,11 @@
                             《Sunset》2023年6月2日登陆网易云国电榜；登录QQ音乐第23周电音榜
                         </strong>
                     </li>
-                    
+
                 </ul>
             </div>
             </p>
             <div class="h-8"></div>
-        </div>
-
         </div>
     </section>
     <div class="h-[30vh]"></div>
